@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | AZREEN ISKANDAR BIN ANUAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .filter-btn {
+      padding: 9px 18px;
+      border: 1px solid #cbd5e1;
+      background-color: #f8fafc;
+      color: #0f172a;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: #e2e8f0;
+    }
+
+    .filter-btn.active {
+      background-color: #0f766e;
+      color: #ffffff;
+      border-color: #0f766e;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .project-card.hidden {
+      display: none;
+    }
+
+    .project-badge {
+      display: inline-block;
+      width: fit-content;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background-color: #ccfbf1;
+      color: #0f766e;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+      color: #0f172a;
+    }
+
+    .project-card p {
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .tech-tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background-color: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">UMPSA<span>VC24013</span></a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <section class="projects-section">
+      <h1 class="page-title">Engineering &amp; Software Projects</h1>
+      <p class="page-subtitle">A collection of hardware prototypes, industrial automation systems, and web applications developed during my studies.</p>
+
+      <div class="filter-buttons" role="group" aria-label="Filter projects by category">
+        <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+        <button type="button" class="filter-btn" data-filter="iot">IoT &amp; Embedded</button>
+        <button type="button" class="filter-btn" data-filter="automation">Industrial Automation</button>
+        <button type="button" class="filter-btn" data-filter="web">Web &amp; Software</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="iot">
+          <div>
+            <span class="project-badge">IoT &amp; Embedded</span>
+            <h3>Smart Single-Phase Power Monitoring System</h3>
+            <p>
+              Built a real-time voltage, current, and power factor monitor using ESP32 and PZEM-004T sensor module with live Wi-Fi telemetry to a web dashboard.
+            </p>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">ESP32</span>
+            <span class="tech-tag">C/C++</span>
+            <span class="tech-tag">PZEM-004T</span>
+            <span class="tech-tag">HTML/JS</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="automation">
+          <div>
+            <span class="project-badge">Industrial Automation</span>
+            <h3>Automated Material Sorting Conveyor (PLC)</h3>
+            <p>
+              Programmed sequential PLC ladder logic to sort metallic and non-metallic workpieces on a DC conveyor belt using inductive/capacitive sensors and pneumatic actuators.
+            </p>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">PLC Ladder Logic</span>
+            <span class="tech-tag">Pneumatics</span>
+            <span class="tech-tag">Proximity Sensors</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="iot">
+          <div>
+            <span class="project-badge">IoT &amp; Embedded</span>
+            <h3>Custom PCB Line-Following &amp; Obstacle Robot</h3>
+            <p>
+              Designed and etched a dual-layer motor driver PCB in Proteus/KiCad integrated with an Arduino microcontroller, IR sensor array, and ultrasonic distance detection.
+            </p>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Proteus / KiCad</span>
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">PWM Control</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div>
+            <span class="project-badge">Web &amp; Software</span>
+            <h3>Personal Engineering Portfolio Website</h3>
+            <p>
+              Developed a responsive multi-page portfolio featuring interactive skill tabs, dynamic project filtering, academic records, and dark/light theme support.
+            </p>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3 Grid/Flex</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear">2026</span> AZREEN ISKANDAR BIN ANUAR. Built for BVI3124 Application System Development.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/Azreen13" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll back to top">&uarr;</button>
+  <script src="js/script.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const selectedFilter = button.getAttribute('data-filter');
+
+        projectCards.forEach((card) => {
+          const cardCategory = card.getAttribute('data-category');
+          if (selectedFilter === 'all' || cardCategory === selectedFilter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

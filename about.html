@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | AZREEN ISKANDAR BIN ANUAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Buang susunan 2 kolum supaya teks terus rapat ke kiri */
+    .about-grid {
+      display: block;
+    }
+
+    .about-story .page-title {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-story h2 {
+      margin-top: 0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      text-align: left;
+      padding: 12px 24px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    }
+
+    .data-table th {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">UMPSA<span>VC24013</span></a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <section class="about-intro">
+      <div class="about-grid">
+        <article class="about-story">
+          <h1 class="page-title">About Me</h1>
+          <h2>Personal Background</h2>
+          <p>
+          "I am a dedicated Technology undergraduate at UMPSA Pekan, passionate about automation, industrial instrumentation, and clean software interfaces."My personal motto is <em>"Nothing is impossible, if I can pave the way, you can reach the top too."</em>
+          </p>
+          <p>
+            Growing up curious about how household appliances worked, I started repairing basic circuits in secondary school before pursuing formal engineering studies. Today, I combine hands-on troubleshooting skills with HTML, CSS, JavaScript, and microcontroller programming to create smart monitoring dashboards and automated hardware prototypes.
+          </p>
+
+          <div class="about-lists">
+            <div>
+              <h3>Career Roadmap (Ordered Goals)</h3>
+              <ol class="styled-list">
+                <li>Complete BTech with First Class Honours at UMPSA.</li>
+                <li>Secure an industrial training placement in semiconductor or automation manufacturing.</li>
+                <li>Earn professional certification as a Graduate Technologist (MBOT).</li>
+              </ol>
+            </div>
+            <div>
+              <h3>Interests &amp; Co-Curricular</h3>
+              <ul class="styled-list">
+                <li>Robotics &amp; IoT prototyping workshops</li>
+                <li>Peer tutoring for circuit analysis &amp; C programming</li>
+                <li>Badminton and community STEM volunteering</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="education-section">
+      <h2 class="section-title">Education &amp; Academic Achievements</h2>
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Qualification / Achievement</th>
+              <th>Institution</th>
+              <th>Result / Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024 – Present</td>
+              <td>Bachelor of Technology Automation Electronics Industry</td>
+              <td>Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)</td>
+              <td>Ongoing</td>
+            </tr>
+            <tr>
+              <td>2022 – 2024</td>
+              <td>Diploma Vokasional (Technology Electronics)</td>
+              <td>Kolej Vokasional Wakaf Tembesu</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>2020 - 2022</td>
+              <td>Sijil Vokasional Malaysia (SVM)</td>
+              <td>Kolej Vokasional Wakaf Tembesu</td>
+              <td>Completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear">2026</span> AZREEN ISKANDAR BIN ANUAR. Built for BVI3124 Application System Development.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:ahmad.danial@student.umpsa.edu.my">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll back to top">&uarr;</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
