@@ -33,13 +33,6 @@ if (hamburgerBtn && navLinks) {
     hamburgerBtn.setAttribute('aria-expanded', isExpanded);
   });
 }
-
-    // Tukar teks butang & simpan status ke localStorage
-    themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-    localStorage.setItem('portfolioTheme', isDark ? 'dark' : 'light');
-  });
-}
-
 // 5. Tahun semasa di footer & butang Scroll to Top
 const yearSpan = document.getElementById('currentYear');
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
@@ -51,3 +44,4 @@ if (scrollTopBtn) {
   });
 
 }
+
