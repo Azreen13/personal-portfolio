@@ -34,20 +34,6 @@ if (hamburgerBtn && navLinks) {
   });
 }
 
-// 4. Tukar & Simpan Tema Dark / Light Mode
-const themeToggle = document.getElementById('themeToggle');
-
-// Semak pilihan tema terakhir yang disimpan dalam pelayar
-if (localStorage.getItem('portfolioTheme') === 'dark') {
-  document.body.classList.add('dark-mode');
-  if (themeToggle) themeToggle.textContent = 'Light Mode';
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-
     // Tukar teks butang & simpan status ke localStorage
     themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
     localStorage.setItem('portfolioTheme', isDark ? 'dark' : 'light');
@@ -63,4 +49,5 @@ if (scrollTopBtn) {
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
 }
