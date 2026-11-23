@@ -431,3 +431,392 @@
     .resume-list {
       padding-left: 18px;
       color: #475569;
+      font-size: 0.92rem;
+    }
+
+    .resume-list li {
+      margin-bottom: 6px;
+    }
+
+    .resume-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group {
+      margin-bottom: 16px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: #334155;
+    }
+
+    .cert-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #169888;
+      font-weight: 800;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #0f2942;
+      color: #ffffff;
+      padding: 24px 0;
+      margin-top: 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .social-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #169888;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #169888;
+      color: #ffffff;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    /* Responsif Telefon Pintar & Tablet */
+    @media (max-width: 900px) {
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.1rem;
+      }
+
+      .skill-pills,
+      .hero-actions,
+      .hero-socials {
+        justify-content: center;
+      }
+
+      .quick-info-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <span>AZREEN ISKANDAR BIN ANUAR &ndash; Official Portfolio</span>
+        <span>UMPSA Student &bull; BVI3124</span>
+      </div>
+    </div>
+
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">UMPSA<span>VC24013</span></a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <p id="greetingText" class="greeting-badge">Welcome to my portfolio</p>
+        <h1>I AM <span class="highlight">AZREEN ISKANDAR BIN ANUAR</span></h1>
+        <h2 class="typing-line">
+          <span id="typingText">Industrial Electronics &amp; Automation Undergraduate</span>
+        </h2>
+        <p class="hero-bio">
+          Industrial Electronics and Automation undergraduate at Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA) with a Diploma in Electronic Technology and hands-on production floor experience. Practical, dependable, and comfortable working directly with machinery and troubleshooting technical issues alongside a team.
+        </p>
+
+        <!-- Lencana Fokus Utama (Skill Pills) -->
+        <div class="skill-pills" aria-label="Core Focus Areas">
+          <span class="skill-pill">PLC Programming</span>
+          <span class="skill-pill">Circuit Soldering</span>
+          <span class="skill-pill">Electrical Wiring</span>
+          <span class="skill-pill">Automation Systems</span>
+          <span class="skill-pill">Pneumatics &amp; Hydraulics</span>
+        </div>
+
+        <!-- Butang Call-to-Action (Termasuk Download Resume) -->
+        <div class="hero-actions">
+          <a href="#resume" class="btn btn-primary">View Resume</a>
+          <a href="docs/resume.pdf" download="Resume_Azreen_Iskandar.pdf" class="btn btn-outline">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download Resume (PDF)
+          </a>
+          <a href="contact.html" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <!-- Barisan Ikon Profesional -->
+        <div class="hero-socials">
+          <a href="https://github.com/Azreen13" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:azreeniskandar10@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            azreeniskandar10@gmail.com
+          </a>
+          <a href="tel:+60189075127" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+            +6018-9075127
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="image/azreen.jpg" alt="Portrait photo of AZREEN ISKANDAR" class="profile-img">
+      </div>
+    </section>
+
+    <!-- Bar Info Ringkas -->
+    <section class="quick-info-section container" aria-label="Quick Highlights">
+      <div class="quick-info-grid">
+        <div class="info-box">
+          <span>Current Status</span>
+          <strong>Open for Internship &amp; Projects</strong>
+        </div>
+        <div class="info-box">
+          <span>Specialization</span>
+          <strong>Industrial Electronic Automation</strong>
+        </div>
+        <div class="info-box">
+          <span>Campus &amp; Hometown</span>
+          <strong>UMPSA Pekan &bull; Kuala Nerus, Terengganu</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bahagian Resume Lengkap -->
+    <section id="resume" class="resume-section container" aria-label="Curriculum Vitae">
+      <div class="resume-header">
+        <div>
+          <h2 class="section-title">Curriculum Vitae</h2>
+          <p class="resume-meta">10367, Kampung Bukit Berangan, Tepoh, Kuala Nerus, Kuala Terengganu &bull; +6018-9075127 &bull; azreeniskandar10@gmail.com</p>
+        </div>
+        <a href="docs/resume.pdf" download="Resume_Azreen_Iskandar.pdf" class="btn btn-primary">Download PDF Copy</a>
+      </div>
+
+      <div class="resume-grid">
+        <!-- Lajur Kiri: Pengalaman & Pendidikan -->
+        <div class="resume-column">
+          <article class="resume-card">
+            <h3 class="resume-card-title">Work Experience</h3>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Production Operator (Internship)</h4>
+                <span class="resume-date">April 2024 &ndash; October 2024</span>
+              </div>
+              <p class="resume-org">Panasonic Sdn. Bhd.</p>
+              <ul class="resume-list">
+                <li>Assembled electronic components on the production line according to Standard Operating Procedures (SOPs) to meet daily output targets.</li>
+                <li>Checked finished parts visually and functionally to catch defects early and maintain Panasonic's quality standards.</li>
+                <li>Operated manufacturing machines and tools safely during daily shifts while ensuring smooth production flow.</li>
+                <li>Packed completed electronic units carefully for storage and delivery to prevent damage during transit.</li>
+                <li>Kept the workstation clean, organized, and safe by practicing 5S habits and following workplace safety rules.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Pump Attendant (Part-Time)</h4>
+                <span class="resume-date">July 2026 &ndash; September 2026</span>
+              </div>
+              <p class="resume-org">Shell Fuel Station</p>
+              <ul class="resume-list">
+                <li>Assisted customers at the forecourt and handled cash, debit, and credit card payments accurately.</li>
+                <li>Followed Shell's forecourt safety procedures at all times to keep the refueling area safe for drivers and staff.</li>
+                <li>Helped motorists with tire pressure checks and windshield cleaning while keeping the pump bays tidy.</li>
+                <li>Shared information on Shell BonusLink rewards and fuel or lubricant products with customers.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="resume-card">
+            <h3 class="resume-card-title">Education</h3>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Bachelor of Industrial Electronic Automation Technology (Hons.)</h4>
+                <span class="resume-date">Oct 2024 &ndash; Present</span>
+              </div>
+              <p class="resume-org">Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA), Pekan, Pahang</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Diploma in Electronic Technology</h4>
+                <span class="resume-date">October 2024</span>
+              </div>
+              <p class="resume-org">Kolej Vokasional Wakaf Tembesu</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Sijil Vokasional Malaysia (SVM)</h4>
+                <span class="resume-date">August 2022</span>
+              </div>
+              <p class="resume-org">Kolej Vokasional Wakaf Tembesu</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-header">
+                <h4>Malaysian Skills Certificate (SKM)</h4>
+                <span class="resume-date">August 2022</span>
+              </div>
+              <p class="resume-org">Kolej Vokasional Wakaf Tembesu</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Lajur Kanan: Kemahiran & Sijil -->
+        <div class="resume-column">
+          <article class="resume-card">
+            <h3 class="resume-card-title">Skills</h3>
+
+            <div class="skill-group">
+              <span class="skill-group-label">Technical Skills</span>
+              <div class="skill-pills" style="margin-bottom: 0;">
+                <span class="skill-pill">Basic Electrical Wiring</span>
+                <span class="skill-pill">Circuit Soldering</span>
+                <span class="skill-pill">PLC Programming</span>
+                <span class="skill-pill">Automation Systems</span>
+                <span class="skill-pill">Basic Pneumatics &amp; Hydraulics</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <span class="skill-group-label">Software</span>
+              <div class="skill-pills" style="margin-bottom: 0;">
+                <span class="skill-pill">Microsoft Word</span>
+                <span class="skill-pill">Microsoft PowerPoint</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="resume-card">
+            <h3 class="resume-card-title">Certifications &amp; Achievements</h3>
+            <ul class="cert-list">
+              <li>CIDB Green Card Holder</li>
+              <li>CIDB Construction Site Worker Safety and Health Induction Course</li>
+              <li>Single-Phase Electrical Installation for Industrial and Building Systems (Certificate)</li>
+              <li>Omron Collaborative Robot (Cobot) Fundamental Workshop (Certificate)</li>
+              <li>Basic Electro-Pneumatic Course</li>
+              <li>Basic Pneumatic &amp; Hydraulics Course</li>
+              <li>Underwater Robot Challenge (Awards &amp; Certificates)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear">2026</span> AZREEN ISKANDAR BIN ANUAR. Built for BVI3124 Application System Development.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/Azreen13" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:vc24013@adab.umpsa.edu.my">Student Email</a></li>
+        <li><a href="mailto:azreeniskandar10@gmail.com">Personal Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll back to top">&uarr;</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
